@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
-
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 const AddCategory = ({setCategories}) =>{
     
@@ -9,6 +8,8 @@ const AddCategory = ({setCategories}) =>{
     const handleInputChange = (e) =>{
         //console.log(e.target.value)
         SetInputValue(e.target.value)
+
+        //console.log('handleInputChangellamada');
     }
 
     const handleSubmit = (e) =>{
@@ -23,6 +24,7 @@ const AddCategory = ({setCategories}) =>{
     
     return(
         <form onSubmit={handleSubmit}>
+            <p>{inputValue}</p>
             <input 
                 type="text"
                 value = {inputValue}
